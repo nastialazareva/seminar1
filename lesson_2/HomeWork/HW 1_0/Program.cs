@@ -3,11 +3,13 @@
 782 -> 8
 918 -> 1*/
 
-int TakeNum(int num)
+string TakeNum(int num)
 {
-    return num / 10 % 10;
+    if (num > 100 && num < 1000)
+        return $"{num / 10 % 10}";
+    return "Это число не является трехзначным";
 }
 
 int newNum = int.Parse(Console.ReadLine()!);
-int result = TakeNum(newNum);
+string result = TakeNum(newNum);
 Console.WriteLine(result);
