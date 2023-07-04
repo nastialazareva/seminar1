@@ -5,7 +5,7 @@ A (7,-5, 0); B (1,-1,9) -> 11.53*/
 
 void FindLen(int x1, int y1, int z1, int x2, int y2, int z2)
 {
-    Console.Write("Расстояние между точками = " + Math.Sqrt((Math.Pow((x1 - x2), 2)) + (Math.Pow((y1 - y2), 2)) + (Math.Pow((z1 - z2), 2))));
+    Console.Write("Расстояние между точками = " + Math.Round(Math.Sqrt(Math.Pow(x1 - x2, 2) + Math.Pow(y1 - y2, 2) + Math.Pow(z1 - z2, 2)), 2));
 }
 
 Console.Write("Введите значение x1: ");
