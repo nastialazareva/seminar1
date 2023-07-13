@@ -19,16 +19,16 @@ int[] MassNums(int size, int from, int to)
     return array;
 }
 
-void SumPosNeg(int[] arr)
+void SumPosNeg(int[] array)
 {
     int pos, neg;
     pos = neg = 0;
 
-    for (int i = 0; i < arr.Length; i++)
+    for (int i = 0; i < array.Length; i++)
     {
-        if (arr[i] >= 0)
-            pos += arr[i];
-        else neg += arr[i];
+        if (array[i] >= 0)
+            pos += array[i];
+        else neg += array[i];
     }
     Console.WriteLine($"Положительные: {pos}, Отрицательные: {neg}");
 }
