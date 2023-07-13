@@ -3,34 +3,37 @@
 Пример: массив [3, 9, -8, 1, 0, -7, 2, -1, 8, -3, -1, 6] сумма положительных чисел = 29,
 а сумма отрицательных чисел = -20. */
 
-void Print(int[] array)
+void Print(int[] arr)
 {
-    int size = array.Length;
+    int size = arr.Length;
+
     for (int i = 0; i < size; i++)
-        Console.Write($"{array[i]}");
+        Console.Write($"{arr[i]} ");
     Console.WriteLine();
 }
 
 int[] MassNums(int size, int from, int to)
 {
-    int[] array = new int[size];
+    int[] arr = new int[size];
+
     for (int i = 0; i < size; i++)
-        array[i] = new Random().Next(from, to + 1);
-    return array;
+        arr[i] = new Random().Next(from, to + 1);
+    return arr;
 }
 
-void SumPosNeg(int[] array)
+void SumPosNeg(int[] arr)
 {
     int pos, neg;
     pos = neg = 0;
 
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < arr.Length; i++)
     {
-        if (array[i] >= 0)
-            pos += array[i];
-        else neg += array[i];
+        if (arr[i] >= 0)
+            pos += arr[i];
+        else
+            neg += arr[i];
     }
-    Console.WriteLine($"Положительные: {pos}, Отрицательные: {neg}");
+    Console.WriteLine($"Positive: {pos}, negative: {neg}");
 }
 
 int num = int.Parse(Console.ReadLine()!);
