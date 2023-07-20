@@ -11,6 +11,7 @@ void PrintArray(int[,] arr)
         }
         Console.WriteLine();
     }
+
 }
 
 void FillArray(int[,] arr, int min, int max)
